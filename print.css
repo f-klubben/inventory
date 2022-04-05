@@ -1,0 +1,50 @@
+tbody tr:nth-child(odd) {
+    background: #eee;
+}
+
+table {
+    border-collapse: collapse;
+    padding: 0.5rem;
+    background-color: white;
+}
+
+td,
+th {
+    border: 1px solid #999;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+div {
+    padding: 0.5rem;
+}
+
+body {
+    font-family: Sans-Serif;
+}
+
+.right {
+    text-align: right;
+}
+
+.red {
+    background-color: orangered;
+}
+
+.green {
+    background-color: limegreen;
+}
+
+input[type="text"] {
+    font-size: x-large;
+}
+
+#input-group,
+#inventory-group,
+#product-group {
+    display: none;
+}
+
+#barcodes td {
+    text-align: center;
+}

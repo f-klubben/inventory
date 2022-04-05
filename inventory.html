@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>F-Klubben's Lageroptælling</title>
+    <link rel="stylesheet" type="text/css" media="all" href="style.css">
+    <link rel="stylesheet" type="text/css" media="print" href="print.css">
+</head>
+
+<body>
+    <h1>F-Klubben's Lageroptælling</h1>
+    <div id="input-group">
+        <div>
+            <input type="text" id="product-id" placeholder="Stregkode" autofocus>
+        </div>
+        <div>
+            <textarea id="history_log" cols="80" rows="5" readonly></textarea>
+        </div>
+    </div>
+    <div id="inventory-group">
+        <h2>Lager</h2>
+        <div>
+            <button onclick="downloadInventoryCsv()">Download inventory csv</button>
+            <button onclick="resetInventory()">Reset inventory</button>
+            <button id="undo-scan">Undo latest scan</button>
+        </div>
+        <table id="inventory">
+            <thead>
+                <tr>
+                    <th>Product name</th>
+                    <th class="right">Quantity size 1</th>
+                    <th class="right">Quantity size 2</th>
+                    <th class="right">Quantity size 3</th>
+                    <th>Summary</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div id="product-group">
+        <h2>Produkter</h2>
+        <div>
+            <button id="add-product-row">Add row</button>
+            <button id="test-btn">Generate barcodes</button>
+        </div>
+        <table id="products">
+            <thead>
+                <tr>
+                    <th>Product name</th>
+                    <th>Size 1 - Name</th>
+                    <th>Size 1 - Barcode</th>
+                    <th class="right">Size 1 - Quantity</th>
+                    <th>Size 2 - Name</th>
+                    <th>Size 2 - Barcode</th>
+                    <th class="right">Size 2 - Quantity</th>
+                    <th>Size 3 - Name</th>
+                    <th>Size 3 - Barcode</th>
+                    <th class="right">Size 3 - Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div id="barcode-group">
+      <h2>Stregkoder</h2>
+      <table id="barcodes">
+        <thead>
+          <tr>
+            <th>Product name</th>
+            <th>Size 1</th>
+            <th>Size 2</th>
+            <th>Size 3</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script type="text/javascript" src="jquery-3.6.0.slim.min.js"></script>
+    <script type="text/javascript" src="JsBarcode.all.min.js"></script>
+    <script type="text/javascript" src="custom.js"></script>
+</body>
+
+</html>
